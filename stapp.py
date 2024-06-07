@@ -14,11 +14,6 @@ mp_face_mesh = mp.solutions.face_mesh
 with open('face_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
-# Counters for actions
-yawn_counter = 0
-sleeping_counter = 0
-distracted_counter = 0
-
 class VideoProcessor(VideoProcessorBase):
     def __init__(self):
         self.face_mesh = mp_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidence=0.5)
