@@ -68,6 +68,9 @@ webrtc_ctx = webrtc_streamer(
     async_transform=True,
 )
 
+if webrtc_ctx.state.playing:
+    st.image(webrtc_ctx.video_frame)
+
 if webrtc_ctx.video_transformer:
     if st.button("Stop"):
         webrtc_ctx.stop()
