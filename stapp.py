@@ -37,7 +37,7 @@ with mp_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidence
             st.write("The video capture has ended")
             break
 
-        frame_start_time = time.time()
+
 
 
 
@@ -87,10 +87,7 @@ with mp_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidence
                                 cv2.LINE_AA)
 
         # Calculate FPS
-        frame_end_time = time.time()
-        time_elapsed = frame_end_time - frame_start_time
-        fps = 1 / time_elapsed
-        fps_list.append(fps)
+
 
         # Display FPS on the frame
         cv2.putText(image, f'FPS: {int(fps)}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
@@ -111,5 +108,4 @@ with mp_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidence
     cv2.destroyAllWindows()
 
 # Calculate and print average FPS
-average_fps = sum(fps_list) / len(fps_list)
-print(f'Average FPS: {average_fps:.2f}')
+
