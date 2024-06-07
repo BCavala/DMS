@@ -1,6 +1,2 @@
-import cv2
-import mediapipe as mp
-import pickle
-import pandas as pd
-import time
-import streamlit as st
+freeglut3-dev
+libgtk2.0-dev
