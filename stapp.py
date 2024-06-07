@@ -68,6 +68,6 @@ webrtc_ctx = webrtc_streamer(
     async_processing=True,  # Changed from async_transform to async_processing
 )
 
-if webrtc_ctx.video_transformer:
+if webrtc_ctx.video_processor:
     if st.button("Stop"):
         webrtc_ctx.stop()
