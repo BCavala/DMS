@@ -1,0 +1,6 @@
+cv2
+mediapipe
+pickle
+pandas
+time
+streamlit
