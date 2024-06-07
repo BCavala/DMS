@@ -63,13 +63,10 @@ st.title("Sustav za nadzor vozača")
 
 webrtc_ctx = webrtc_streamer(
     key="example",
-    video_transformer_factory=FaceProcessor,
+    video_processor_factory=FaceProcessor,
     rtc_configuration=rtc_configuration,
-    async_transform=True,
+    async_processing=True,  # Changed from async_transform to async_processing
 )
-
-if webrtc_ctx.state.playing:
-    st.image(webrtc_ctx.video_frame)
 
 if webrtc_ctx.video_transformer:
     if st.button("Stop"):
