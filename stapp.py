@@ -14,10 +14,6 @@ mp_face_mesh = mp.solutions.face_mesh
 with open('face_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
-# Variables to calculate FPS
-fps_list = []
-start_time = time.time()
-
 # Counters for actions
 yawn_counter = 0
 sleeping_counter = 0
